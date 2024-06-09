@@ -7,14 +7,19 @@ export default function SearchBox() {
   const filter = useSelector(selectNameFilter);
 
   const getFilter = (event) => {
-    const name = event.target.value.trim();
+    const name = event.target.value;
     dispatch(setFilter(name));
   };
 
   return (
     <div className={css.conte}>
-      <label>Find contacts by name</label>
-      <input type="text" value={filter} onChange={getFilter} />
+      <label className={css.name}>Find contacts by name</label>
+      <input
+        className={css.input}
+        type="text"
+        value={filter}
+        onChange={getFilter}
+      />
     </div>
   );
 }
