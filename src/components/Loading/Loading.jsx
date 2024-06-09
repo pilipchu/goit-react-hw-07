@@ -1,9 +1,9 @@
 import css from "./Loading.module.css";
-import { MagnifyingGlass } from "react-loader-spinner";
+import { DNA } from "react-loader-spinner";
 export default function Loading() {
   return (
     <div className={css.box}>
-      <MagnifyingGlass
+      <DNA
         visible={true}
         height="80"
         width="80"
